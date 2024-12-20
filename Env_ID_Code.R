@@ -5,37 +5,8 @@ output:
   html_document:
   keep_tex: true
 ---
-  This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
 
-These code blocks are where I keep all of my notes & working thoughts on figure generation and analyses. When you "Knit" the R Markdown doc, it converts this markdown file to other document formats, such as PDF or HTML. This format is useful *in place of* creating a powerpoint of your figures because you can integrate your code and annotations all in one! And send to others as a single document (pdf/html) or the source .Rmd that created the doc. However, one downside is - if your code takes awhile to process (large dataset/many iterations), it will take that much longer to knit. This can be frustrating when producing a final product. I would recommend avoiding intensive processing in your .Rmd - it will certainly work and can be done, but if you're trying to iterate quickly and refine your .Rmd for sharing, long knitting times can be prohibitive. You can also use the "cache=TRUE" option in a chunk, which works well if you're confident that chunk and its outputs won't need to change. When importing the datasets/analysis products from other scripts/locations, just make sure to document VERY well what script generated it & where the data live. 
-
-______
-
-This first chunk is the setup chunk. Currently, this will not appear in your knitted document because of "include=FALSE" (i.e. do NOT include this chunk in the output pdf/html). You can always remove the "include=FALSE" argument from the brackets to make more transparent what was required for your notebook (i.e. include in the output pdf all packages used and information to set up your .Rmd. 
-
-**Here we do 4 things in the set up brackets:**
-
-1. Designate this is R code (you can run other languages)
-2. Load the built-in cars dataset
-3. Designate global options  set for the entire notebook
-4. Designate the include=FALSE, which means: do NOT include this chunk visibly in the knit document
-
-**Then, set knitr options:** *Specifically, we tell knitr how to create figures and where to write them out (i.e. our repository!)*
-
-**Then, we load any necessary packages used in the .Rmd**
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
-
-```{r cars, global_options,include=FALSE}
-
-#specify how you'd like figures to be produced, size, file type, where, etc.
-#Because you're specifying these options in the global chunk, ALL figures will be generated according to this information
-#However, you can set "knitr::options" for each chunk if you need to override any global options
-knitr:: opts_chunk$set(fig.width=12,fig.height=8,dev = c('jpeg'), fig.path='figures/',echo=TRUE, warning=FALSE, message=FALSE)
-
-
-#and read in a Built-in cars dataset to be imported as a dataframe, which is a common USEFUL datatype in R
-
+  
 
 ```{r include=FALSE}
 ## Load Packages
